@@ -26,7 +26,7 @@ const FriendsListItem = ({ id, username, isOnline, setChosenChatDetails }) => {
         position: "relative",
       }}
     >
-      <Avatar username={username} />
+      <div></div>
       <Typography
         style={{
           marginLeft: "7px",

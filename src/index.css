@@ -73,3 +73,19 @@ code {
 .create-server-button:hover {
   background: #4e5bf0;
 }
+
+.ripple {
+  background-position: center;
+  transition: background 0.3s;
+}
+
+.ripple:hover {
+  background: #393b3d radial-gradient(circle, transparent 1%, #22292c 1%)
+    center/15000%;
+}
+
+.ripple:active {
+  background-color: #393b3d;
+  background-size: 100%;
+  transition: background 0s;
+}
