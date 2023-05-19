@@ -1,0 +1,7 @@
+{
+  "name": "frntend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

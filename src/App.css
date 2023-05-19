@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-responsive-modal-modal {
+  color: white;
+  border-radius: 5px;
+  background-color: #36393f !important;
+}
