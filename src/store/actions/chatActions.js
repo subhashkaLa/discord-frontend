@@ -1,6 +1,7 @@
 export const chatTypes = {
   DIRECT: "DIRECT",
   GROUP: "GROUP",
+  FRIEND_LIST: "FRIEND_LIST",
 };
 
 export const chatActions = {

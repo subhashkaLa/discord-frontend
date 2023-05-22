@@ -9,10 +9,9 @@ const MainContainer = styled("div")({
   marginTop: "10px",
 });
 
-const MessagesHeader = ({ name = "" }) => {
+const MessagesHeader = ({ name = "", type }) => {
   return (
     <MainContainer>
-      <Avatar large username={name} />
       <Typography
         variant="h4"
         sx={{
@@ -24,15 +23,40 @@ const MessagesHeader = ({ name = "" }) => {
       >
         {name}
       </Typography>
-      <Typography
-        sx={{
-          color: "#b9bbbe",
-          marginLeft: "5px",
-          marginRight: "5px",
-        }}
-      >
-        This is the beginning of your conversation with {name}
-      </Typography>
+      {type === "friendList" ? (
+        <div>
+          <Typography
+            sx={{
+              width: "100%",
+              color: "#b9bbbe",
+              marginLeft: "5px",
+              marginRight: "5px",
+            }}
+          >
+            Start a conversation
+          </Typography>
+          <div className="flex ml-2 mb-2">
+            <div className="flex gap-2">
+              <div
+                className="bg-green-600 rounded-full mt-2"
+                style={{ width: "10px", height: "10px" }}
+              ></div>
+              <div>Online Friends</div>
+            </div>
+          </div>
+          <hr />
+        </div>
+      ) : (
+        <Typography
+          sx={{
+            color: "#b9bbbe",
+            marginLeft: "5px",
+            marginRight: "5px",
+          }}
+        >
+          This is the beginning of your conversation with {name}
+        </Typography>
+      )}
     </MainContainer>
   );
 };

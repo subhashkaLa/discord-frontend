@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 const MainContainer = styled("div")({
   flexGrow: 1,
   width: "100%",
+  marginLeft: "10px",
 });
 
 const checkOnlineUsers = (friends = [], onlineUsers = []) => {

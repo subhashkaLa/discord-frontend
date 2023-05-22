@@ -3,6 +3,7 @@ import { styled } from "@mui/system";
 import { connect } from "react-redux";
 import WelcomeMessage from "./WelcomeMessage";
 import MessengerContent from "./MessengerContent";
+import FriendList from "../friends/friend-list";
 
 const MainContainer = styled("div")({
   flexGrow: 1,
@@ -14,10 +15,12 @@ const MainContainer = styled("div")({
 const Messenger = ({ chosenChatDetails, pendingDetailsList }) => {
   return (
     <MainContainer>
-      {!chosenChatDetails ? (
-        <WelcomeMessage />
-      ) : (
+      {chosenChatDetails?.type === "friend" ? (
         <MessengerContent chosenChatDetails={chosenChatDetails} />
+      ) : chosenChatDetails?.type === "friendList" ? (
+        <FriendList />
+      ) : (
+        <WelcomeMessage />
       )}
     </MainContainer>
   );

@@ -9,7 +9,10 @@ import UserAvatar from "../../../shared/components/user-avatar";
 
 const FriendsListItem = ({ id, username, isOnline, setChosenChatDetails }) => {
   const handleChooseActiveConversation = () => {
-    setChosenChatDetails({ id: id, name: username }, chatTypes.DIRECT);
+    setChosenChatDetails(
+      { id: id, name: username, type: "friend" },
+      chatTypes.DIRECT
+    );
   };
 
   return (
