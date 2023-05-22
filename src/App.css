@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,4 +7,69 @@
   color: white;
   border-radius: 5px;
   background-color: #36393f !important;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.avatar:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  border: 1px solid #fff;
+}
+
+.avatar .online:before {
+  background-color: lime;
+}
+
+.avatar .offline img {
+  opacity: 0.8;
+}
+
+.avatar .offline:before {
+  z-index: 10;
+  background-color: #f5f5f5;
+  border-color: #b1b1b1;
+}
+
+.avatar .offline:after {
+  font-family: "FontAwesome";
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 2px;
+  color: #ff3c41;
+  font-size: 8px;
+  z-index: 11;
+}
+
+.invited {
+  position: relative;
+  display: inline-block;
+}
+.invited i {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: #5cb85c;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: content-box;
+}
+.invited i:before {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  font-size: 12px;
 }

@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import OnlineIndicator from "./OnlineIndicator";
 import { chatTypes, getActions } from "../../../store/actions/chatActions";
 import { connect } from "react-redux";
+import UserAvatar from "../../../shared/components/user-avatar";
 
 const FriendsListItem = ({ id, username, isOnline, setChosenChatDetails }) => {
   const handleChooseActiveConversation = () => {
@@ -26,7 +27,7 @@ const FriendsListItem = ({ id, username, isOnline, setChosenChatDetails }) => {
         position: "relative",
       }}
     >
-      <div></div>
+      <UserAvatar isOnline={isOnline} />
       <Typography
         style={{
           marginLeft: "7px",
@@ -38,7 +39,6 @@ const FriendsListItem = ({ id, username, isOnline, setChosenChatDetails }) => {
       >
         {username}
       </Typography>
-      {isOnline && <OnlineIndicator />}
     </Button>
   );
 };

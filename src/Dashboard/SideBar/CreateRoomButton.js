@@ -29,9 +29,9 @@ const CreateRoomButton = ({ isUserInRoom }) => {
           backgroundColor: "#5865F2",
         }}
       >
-        <ToolTips position="right" content="Create a server">
-          <AddIcon />
-        </ToolTips>
+        {/* <ToolTips position="right" content="Create a server"> */}
+        <AddIcon />
+        {/* </ToolTips> */}
       </Button>
       <CreateRoomModal
         showModal={showServerModal}

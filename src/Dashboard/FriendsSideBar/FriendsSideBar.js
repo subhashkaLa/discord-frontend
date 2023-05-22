@@ -42,7 +42,7 @@ const FriendsSideBar = () => {
       </div>
       <div className="flex justify-between px-4 my-4">
         <div className="text-white text-sm">Direct Messages</div>
-        <div className="text-white text-sm">+</div>
+        <AddFriendButton />
       </div>
       <FriendsList />
       <FriendsTitle title="Invitations" />
